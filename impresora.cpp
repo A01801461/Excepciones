@@ -21,7 +21,8 @@ void Impresora::imprimir(string txt)
 {
     int letras = txt.size();
     int numeroHojas = letras/3;
-    if(numeroHojas > numHojas)
+    // si no hay suficientes hojas lanza error
+    if(numeroHojas > numHojas) 
     {
         string err = "No hay suficientes hojas";
         throw(err);
