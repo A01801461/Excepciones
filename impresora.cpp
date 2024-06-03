@@ -21,6 +21,11 @@ void Impresora::imprimir(string txt)
 {
     int letras = txt.size();
     int numeroHojas = letras/3;
+    if(numeroHojas > numHojas)
+    {
+        string err = "No hay suficientes hojas";
+        throw(err);
+    }
     numHojas = numHojas - numeroHojas;
     cout << "imprmiendo pagina: " << txt << endl;
     cout << "hojas restantes: " << numHojas << endl;
